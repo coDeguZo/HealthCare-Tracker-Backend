@@ -24,6 +24,23 @@ ActiveRecord::Schema.define(version: 2020_07_03_203421) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "corona_data", force: :cascade do |t|
+    t.string "country"
+    t.integer "cases"
+    t.integer "todayCases"
+    t.integer "deaths"
+    t.integer "todayDeaths"
+    t.integer "recovered"
+    t.integer "active"
+    t.integer "critical"
+    t.integer "casesPerOneMillion"
+    t.integer "deathsPerOneMillion"
+    t.integer "totalTests"
+    t.integer "testsPerOneMillion"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "password"
